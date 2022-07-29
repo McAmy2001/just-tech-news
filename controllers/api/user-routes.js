@@ -89,10 +89,6 @@ router.post('/login', (req, res) => {
       res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
-<<<<<<< HEAD:routes/api/user-routes.js
-
-    res.json({ user: dbUserData, message: 'You are now logged in!' });
-=======
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
@@ -100,7 +96,6 @@ router.post('/login', (req, res) => {
     
       res.json({ user: dbUserData, message: 'You are now logged in!' });
     });
->>>>>>> develop:controllers/api/user-routes.js
   });
 });
 
@@ -146,9 +141,6 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-<<<<<<< HEAD:routes/api/user-routes.js
-module.exports = router;
-=======
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -162,4 +154,3 @@ router.post('/logout', (req, res) => {
 
 
 module.exports = router;
->>>>>>> develop:controllers/api/user-routes.js
