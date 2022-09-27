@@ -1,5 +1,5 @@
 # just-tech-news
 
-## Bootcamp Module 13: Object-Relational Mapping
+## Bootcamp Module 14: Model-View-Contrtoller
 
 #### All code is from the bootcamp module.
